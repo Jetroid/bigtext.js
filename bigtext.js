@@ -1,8 +1,7 @@
-calculateInnerDimensions = function(computedStyle){
-	//Calculate the parent inner width and height
-	//If box-sizing is border-box, we need to subtract padding and border.
+_calculateInnerDimensions = function(computedStyle){
+	//Calculate the inner width and height
 	var innerWidth;
-	var	innerHeight;
+	var innerHeight;
 
 	var width = parseInt(computedStyle.getPropertyValue("width"));
 	var height = parseInt(computedStyle.getPropertyValue("height"));
@@ -30,7 +29,7 @@ calculateInnerDimensions = function(computedStyle){
 	return obj;
 }
 
-HTMLDivElement.prototype.bigText = function(options){
+HTMLElement.prototype.bigText = function(options){
 	var defaultOptions = {
 		rotateText: null,
 		fontSizeFactor: 0.8,
@@ -86,7 +85,7 @@ HTMLDivElement.prototype.bigText = function(options){
 	};
 
 	//Calculate the parent inner width and height
-	var parentInnerDimensions = calculateInnerDimensions(parentComputedStyle);
+	var parentInnerDimensions = _calculateInnerDimensions(parentComputedStyle);
 	var parentInnerWidth = parentInnerDimensions["width"];
 	var parentInnerHeight = parentInnerDimensions["height"];
 	
@@ -142,8 +141,8 @@ HTMLDivElement.prototype.bigText = function(options){
 		parentStyle.width = (parseInt(computedStyle.getPropertyValue("width")) + 4) + "px";
 	}
 
-	//Calculate the parent inner width and height
-	var innerDimensions = calculateInnerDimensions(computedStyle);
+	//Calculate the inner width and height
+	var innerDimensions = _calculateInnerDimensions(computedStyle);
 	var innerWidth = innerDimensions["width"];
 	var innerHeight = innerDimensions["height"];
 
