@@ -57,7 +57,7 @@ _calculateInnerDimensions = function(computedStyle){
 	var borderLeft = parseInt(computedStyle.getPropertyValue("border-left"));
 	var borderRight = parseInt(computedStyle.getPropertyValue("border-right"));
 	var borderTop = parseInt(computedStyle.getPropertyValue("border-top"));
-	var borderBottom = parseInt(computedStyle.getPropertyValue("border-right"));
+	var borderBottom = parseInt(computedStyle.getPropertyValue("border-bottom"));
 
 	//If box-sizing is border-box, we need to subtract padding and border.
 	var parentBoxSizing = computedStyle.getPropertyValue("box-sizing");
