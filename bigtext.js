@@ -92,6 +92,7 @@ HTMLElement.prototype.bigText = function(options){
 		if (defaultOptions.hasOwnProperty(opt) && !options.hasOwnProperty(opt))
 			options[opt] = defaultOptions[opt];
 	
+	//Get variables which we will reference frequently
 	var style = this.style;
 	var computedStyle = document.defaultView.getComputedStyle(this);
 	var parent = this.parentNode;
@@ -115,13 +116,13 @@ HTMLElement.prototype.bigText = function(options){
 	style.left = "50%";
 	style.top = "50%";
 
+	//Get properties of parent to allow easier referencing later.
 	var parentPadding = {
 		top: parseInt(parentComputedStyle.getPropertyValue("padding-top")),
 		right: parseInt(parentComputedStyle.getPropertyValue("padding-right")),
 		bottom: parseInt(parentComputedStyle.getPropertyValue("padding-bottom")),
 		left: parseInt(parentComputedStyle.getPropertyValue("padding-left")),
 	};
-
 	var parentBorder = {
 		top: parseInt(parentComputedStyle.getPropertyValue("border-top")),
 		right: parseInt(parentComputedStyle.getPropertyValue("border-right")),
@@ -139,6 +140,7 @@ HTMLElement.prototype.bigText = function(options){
 		height: this.offsetHeight,
 	};
 
+	
 	if (options.rotateText !== null) {
 		if (typeof options.rotateText !== "number")
 			throw "bigText error: rotateText value must be a number";
