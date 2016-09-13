@@ -1,0 +1,21 @@
+{
+  "name": "bigtext.js",
+  "main": "bigtext.js",
+  "homepage": "https://github.com/Jetroid/bigtext.js",
+  "authors": [
+    "Jetroid <holtjet@gmail.com>"
+  ],
+  "description": "JS component that makes HTML text tags as big as possible while still fitting on the parent. Adapted from DanielHoffmann/jquery-bigtext",
+  "keywords": [
+    "bigtext",
+    "text"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

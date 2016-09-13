@@ -1,0 +1,23 @@
+{
+  "name": "bigtext.js",
+  "version": "1.0.0",
+  "description": "JS component that makes HTML text tags as big as possible while still fitting on the parent. Adapted from DanielHoffmann/jquery-bigtext",
+  "main": "bigtext.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jetroid/bigtext.js.git"
+  },
+  "keywords": [
+    "bigtext",
+    "text"
+  ],
+  "author": "Jet Holt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Jetroid/bigtext.js/issues"
+  },
+  "homepage": "https://github.com/Jetroid/bigtext.js#readme"
+}
