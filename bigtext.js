@@ -1,3 +1,48 @@
+/*
+bigtext.js v1.0.0, September 2016
+Adapted from DanielHoffmann/jquery-bigtext, v1.3.0, May 2014
+
+Usage:
+document.getElementById("myElement").bigText({
+	rotateText: {Number}, (null)
+	fontSizeFactor: {Number}, (0.8)
+	maximumFontSize: {Number}, (null)
+	limitingDimension: {Number}, ("both")
+	horizontalAlign: {String}, ("center")
+	verticalAlign: {String}, ("center")
+	textAlign: {String}, ("center")
+});
+
+This code from: https://github.com/Jetroid/bigtext.js
+Original Project: https://github.com/DanielHoffmann/jquery-bigtext
+
+Options:
+
+rotateText: Rotates the text inside the element by X degrees.
+
+fontSizeFactor: This option is used to give some vertical spacing for letters that overflow the line-height (like 'g', 'Á' and most other accentuated uppercase letters). This does not affect the font-size if the limiting factor is the width of the parent div. The default is 0.8
+
+maximumFontSize: maximum font size to use.
+
+limitingDimension: In which dimension the font size should be limited. Possible values: "width", "height" or "both". Defaults to both. Using this option with values different than "both" overwrites the element parent width or height.
+
+horizontalAlign: Where to align the text horizontally. Possible values: "left", "center", "right". Defaults to "center".
+
+verticalAlign: Where to align the text vertically. Possible values: "top", "center", "bottom". Defaults to "center".
+
+textAlign: Sets the text align of the element. Possible values: "left", "center", "right". Defaults to "center". This option is only useful if there are linebreaks (<br> tags) inside the text.
+
+whiteSpace: Sets whitespace handling. Possible values: "nowrap", "pre". Defaults to "nowrap". (Can also be set to enable wrapping but this doesn't work well.)
+
+Copyright (C) 2013 Daniel Hoffmann Bernardes, Ícaro Technologies
+Copyright (C) 2016 Jet Holt
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*/
 _calculateInnerDimensions = function(computedStyle){
 	//Calculate the inner width and height
 	var innerWidth;
